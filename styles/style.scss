@@ -1,9 +1,9 @@
-@import "breakpoints/base";
+@import "https://amahiro.github.io/portfolio-dental/styles/breakpoints/base";
 
 @media (max-width: 1025px) {
-  @import "breakpoints/tab";
+  @import "https://amahiro.github.io/portfolio-dental/styles/breakpoints/tab";
 }
 
 @media (max-width: 599px) {
-  @import "breakpoints/sp";
+  @import "https://amahiro.github.io/portfolio-dental/styles/breakpoints/sp";
 }
