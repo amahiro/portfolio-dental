@@ -1,0 +1,9 @@
+@import "breakpoints/base";
+
+@media (max-width: 1025px) {
+  @import "breakpoints/tab";
+}
+
+@media (max-width: 599px) {
+  @import "breakpoints/sp";
+}

@@ -1,0 +1,383 @@
+/******************************************************************
+
+Stylesheet: タブレットサイズのモニタで適用
+
+******************************************************************/
+/*-------------------------------
+
+	base
+
+-------------------------------*/
+.body-fixed {
+	overflow: hidden;
+}
+.heading {
+	font-size: 2.8rem;
+	&::after {
+		bottom: -16px;
+		left: 50%;
+		font-size: 1.4rem;
+	}
+}
+.btn {
+	line-height: 38px;
+	border-radius: 19px;
+	max-width: 140px;
+	height: 38px;
+	font-size: 1.4rem;
+}
+.bg-btn {
+	line-height: 62px;
+	max-width: initial;
+	width: 48%;
+	height: 70px;
+	font-size: 1.4rem;
+}
+.tel {
+	> span {
+		font-size: 2.4rem;
+		&::before {
+			bottom: 0;
+			left: -2px;
+			width: 24px;
+			height: 24px;
+		}
+	}
+}
+/*-------------------------------
+
+	header
+
+-------------------------------*/
+.header {
+	&__top {
+		height: 100px;
+		> h1 {
+			width: 160px;
+		}
+		&--nav-btn {
+			justify-content: flex-end;
+			> .hamburger {
+				display: block;
+				margin-left: 40px;
+				z-index: 10000;
+				> span {
+					display: block;
+					border-radius: 2px;
+					width: 30px;
+					height: 3px;
+					background-color: #444444;
+					transition: all .3s;
+					&:first-child {
+						margin-bottom: 5px;
+					}
+					&:last-child {
+						margin-top: 5px;
+					}
+				}
+			}
+			> .hamburger-open {
+				> span {
+					&:first-child {
+						transform: translateY(8px) rotate(-45deg);
+					}
+					&:nth-child(2) {
+						opacity: 0;
+					}
+					&:last-child {
+						transform: translateY(-8px) rotate(45deg);
+					}
+				}
+			}
+		} 
+	}
+	&__kv {
+		top: 100px;
+		bottom: 50px;
+	}
+	&__nav {
+		position: absolute;
+		margin: 0 calc(50% - 50vw);
+		background-color: #fff;
+		width: 100vw;
+		height: 100vh;
+		z-index: -100;
+		transition: all .3s;
+		> ul {
+			flex-direction: column;
+			align-items: center;
+			> li {
+				margin: 0 0 20px;
+				opacity: 0;
+				&:first-child {
+					display: inline-block;
+					margin-bottom: 40px;
+					> a {
+						width: 180px;
+					}
+				}
+				&:nth-child(2) {
+					> a {
+						&::before {
+							background-image: none;
+						}
+					}
+				}
+				&:nth-child(3) {
+					> a {
+						&::before {
+							background-image: none;
+						}
+					}
+				}
+				&:nth-child(4) {
+					> a {
+						&::before {
+							background-image: none;
+						}
+					}
+				}
+				&:nth-child(5) {
+					> a {
+						&::before {
+							background-image: none;
+						}
+					}
+				}
+				&:last-child {
+					margin-bottom: 0;
+					> a {
+						&::before {
+							background-image: none;
+						}
+					}
+				}
+				> a {
+					margin-bottom: 0;
+					font-size: 2rem;
+					&::before {
+						content: none;
+					}
+				}
+			}
+		}
+		&--open {
+			> ul {
+				> li {
+					animation: fadein .4s ease-in-out 1 normal forwards;
+					@for $i from 2 through 6 {
+						&:nth-child(#{$i}) {
+							animation-delay: .15s * $i;
+						}
+					}
+				}
+			}
+			z-index: 9999;
+			transition: all .3s;
+		}
+	}
+}
+/*-------------------------------
+
+	info
+
+-------------------------------*/
+.info {
+	padding-top: 50px;
+	&__wrapper {
+		justify-content: space-between;
+	}
+	&__heading {
+		font-size: 1.8rem;
+		&::after {
+			left: 1px;
+			transform: translateX(0);
+		}
+	}
+}
+/*-------------------------------
+
+	news
+
+-------------------------------*/
+.news {
+	margin-right: 0;
+	width: 48%;
+	> .heading {
+		margin-bottom: 50px;
+	}
+	&__items {
+		margin-bottom: 40px;
+	}
+	&__item {
+		line-height: 30px;
+		font-size: 1.4rem;
+	}
+}
+/*-------------------------------
+
+	schedule
+
+-------------------------------*/
+.schedule {
+	width: 48%;
+	> .heading {
+		margin-bottom: 40px;
+	}
+	&__list {
+		font-size: 1.4rem;
+		> tbody {
+			> tr {
+				> .time {
+					width: auto;
+				}
+				> th {
+					height: 40px;
+				}
+				> td {
+					height: 40px;
+				}
+			}
+		}
+	}
+}
+/*-------------------------------
+
+	about
+
+-------------------------------*/
+.about {
+	padding-top: 120px;
+	> .heading {
+		margin-bottom: 60px;
+	}
+	&__body {
+		padding: 120px 0;
+		&::before {
+			border-radius: 25px;
+		}
+	}
+	&__text {
+		max-width: 420px;
+		&--title {
+			margin-bottom: 40px;
+			font-size: 3.3rem;
+		}
+		&--lead {
+			margin-bottom: 40px;
+		}
+	}
+}
+/*-------------------------------
+
+	treatment
+
+-------------------------------*/
+.treatment {
+	padding: 120px 0;
+	&::after {
+		height: 35%;
+	}
+	> .heading {
+		margin-bottom: 60px;
+	}
+	&__item {
+		padding: 40px 0;
+		&::before {
+			width: 50px;
+			height: 50px;
+		}
+		> span {
+			font-size: 1.8rem;
+		}
+		> p {
+			display: none;
+		}
+	}
+}
+/*-------------------------------
+
+	feature
+
+-------------------------------*/
+.feature {
+	padding: 0 0 120px;
+	> .heading {
+		margin-bottom: 60px;
+	}
+	&__body {
+		&--top {
+			padding: 120px 0 60px;
+			margin-bottom: 60px;
+			&::before {
+			background-position: right;
+			}
+		}
+	}
+	&__text {
+		max-width: 420px;
+		&--title {
+			margin-bottom: 40px;
+			font-size: 3.3rem;
+		}
+	}
+	&__item {
+		width: 24%;
+		> a {
+			&::before {
+				width: 40px;
+				height: 40px;
+			}
+			> span {
+				font-size: 1.4rem;
+			}
+		}
+	}
+	&__contact-message {
+		font-size: 1.8rem;
+	}
+}
+.request-btn {
+	line-height: 70px;
+}
+/*-------------------------------
+
+	recruit
+
+-------------------------------*/
+.recruit {
+	padding: 60px 0;
+	&__text {
+		padding: 60px 40px;
+		max-width: 420px;
+	}
+}
+/*-------------------------------
+
+	access
+
+-------------------------------*/
+.access {
+	padding: 120px 0 60px;
+	> .heading {
+		margin-bottom: 60px;
+	}
+	&__logo {
+		width: 180px;
+	}
+	&__tel {
+		> p {
+			font-size: 1.4rem;
+		}
+		> span {
+			font-size: 2.2rem;
+			&::before {
+				width: 22px;
+				height: 22px;
+			}
+		}
+	}
+	&__btn {
+		width: 100%;
+	}
+}
