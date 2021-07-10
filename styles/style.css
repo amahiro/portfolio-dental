@@ -41,6 +41,7 @@ ul {
 .inner {
   margin: 0 auto;
   width: 80%;
+  max-width: 1300px;
 }
 
 .flex {
@@ -208,6 +209,7 @@ ul {
 .header__inner {
   position: relative;
   height: 100%;
+  max-width: none;
 }
 
 .header__top {
