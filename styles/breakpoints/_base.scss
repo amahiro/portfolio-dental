@@ -34,6 +34,7 @@ ul {
 .inner {
 	margin: 0 auto;
 	width: 80%;
+	max-width: 1300px;
 }
 .flex {
 	display: flex;
@@ -148,6 +149,7 @@ ul {
 	&__inner {
 		position: relative;
 		height: 100%;
+		max-width: none;
 	}
 	&__top {
 		height: 124px;
