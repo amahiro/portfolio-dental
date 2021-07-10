@@ -103,7 +103,6 @@ Stylesheet: スマートフォンサイズのモニタで適用
 		font-size: 1.8rem;
 		&::after {
 			left: 50%;
-			bottom: -8px;
 			transform: translateX(-50%);
 		}
 	}
