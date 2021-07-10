@@ -1614,7 +1614,6 @@ Stylesheet: スマートフォンサイズのモニタで適用
   }
   .info__heading::after {
     left: 50%;
-    bottom: -8px;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
